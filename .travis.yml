@@ -1,0 +1,12 @@
+language: python
+
+python:
+  - "3.8"
+
+install: python -c "print('Hello Travis-CI')"
+
+script: skip
+
+git:
+  depth: 1
+  quiet: true
