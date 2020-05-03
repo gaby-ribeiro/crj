@@ -3,9 +3,19 @@ language: python
 python:
   - "3.8"
 
-install: python -c "print('Hello Travis-CI')"
+install:
+  - pip install -r requirements/dev.txt
 
-script: skip
+# Run the unit test
+script:
+  - coverage erase
+  - coverage run tst/unit_test.py && coverage html
+
+# Push the results back to codecov
+after_success:
+  - codecov
+
+
 
 git:
   depth: 1
