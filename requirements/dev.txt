@@ -10,6 +10,7 @@ pylint==2.5.0
 
 # Coverage
 coverage==5.1
+coveralls
 codecov==2.0.22
 
 # Documentation
